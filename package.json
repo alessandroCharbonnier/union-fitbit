@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    "@fitbit/sdk": "^5.0.1"
+  },
+  "fitbit": {
+    "appUUID": "5d44c4d7-46a3-47f9-ad25-c92b4611c4c7",
+    "appType": "clockface",
+    "appDisplayName": "pink radar",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [
+      "access_heart_rate",
+      "access_activity",
+      "access_user_profile"
+    ],
+    "buildTargets": [
+      "atlas"
+    ],
+    "i18n": {
+      "en-US": {
+        "name": "pink radar"
+      }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "dependencies": {
+    "@fitbit/sdk-cli": "^1.7.3"
+  },
+  "scripts": {
+    "build": "fitbit-build"
+  }
+}

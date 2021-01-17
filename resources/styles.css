@@ -1,0 +1,7 @@
+.cycle-item text {
+  font-size: 24;
+  x: 100%-10;
+  text-anchor: end;
+  fill: white;
+  opacity: 0.7
+}

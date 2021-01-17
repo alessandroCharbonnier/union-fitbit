@@ -1,0 +1,93 @@
+<svg id="myRect" viewport-fill="#000000">
+  <mask id="mask">
+    <circle cx="50%" cy="50%" r="111" />
+  </mask>
+  <svg mask="#mask" width="100%" height="100%" fill="#ffffff">
+  <!--  ANALOG CLOCK  -->
+  <g id="mins" pointer-events="visible" transform="translate(50%,50%)">
+    <image x="$-114" y="$-114" width="228" height="228" href="images/clock/minutes1.png"/>
+  </g>
+  <g id="secs" pointer-events="visible" transform="translate(50%,50%)">
+    <animateTransform id="secsanimation" attributeType="rotate" from="0" to="6" begin="enable" dur="1" />
+    <rect x="$-1" y="-136" width="2" height="136" fill="black" opacity="0.5"/>
+  </g>
+  <g id="hours" pointer-events="visible" transform="translate(50%,50%)">
+    <image x="$-68" y="$-68" width="136" height="136" href="images/clock/hours1.png"/>
+  </g>
+    </svg>
+  <!--  DIGITAL CLOCK  -->
+  <text id="clock-label" x="80%+15" y="7%+20" fill="white" font-size="24" font-family="System-Regular" text-anchor="middle" text-length="5" opacity="0.7">>12:17</text>
+  
+  <!--  DATE  -->
+  <text id="date-label" x="50%" y="90%+15" fill="white" font-size="34" font-family="System-Regular" text-anchor="middle" text-length="11" opacity="0.7">Mer 1 Jui.</text>
+  
+  <!--  GOALS  -->  
+  <!--  HEART  -->
+  <svg id="hearGoalGroup" class="goal" x="0" y="0">
+    <animate attributeName="y" begin="enable" from="10" to="0" dur="0.2" easing="linear" final="restore" />
+    <animate attributeName="opacity" begin="enable" from="0" to="0.7" dur="0.2" easing="linear" final="restore" />
+    <image id="bite" class="goal-image" x="125" y="20" width="10%" height="10%" href="images/icons/heart.png" load="sync"/>
+    <text id="heart-label" x="190" y="43" fill="white" font-size="24" font-family="System-Regular" text-anchor="middle" text-length="3" opacity="0.7">999</text>
+  </svg>
+  <!--  CALORIES  -->
+  <svg id="caloriesGoalGroup" class="goal" x="0" y="0">
+    <animate attributeName="y" begin="enable" from="10" to="0" dur="0.2" easing="linear" final="restore" />
+    <animate attributeName="opacity" begin="enable" from="0" to="0.7" dur="0.2" easing="linear" final="restore" />
+    <image class="goal-image" x="125" y="20" width="10%" height="10%" href="images/icons/flame.png" load="sync"/>
+    <text id="calories-label" x="190" y="43" fill="white" font-size="24" font-family="System-Regular" text-anchor="middle" text-length="6" opacity="0.7">99 999</text>
+  </svg>
+  <!--  DISTANCE  -->
+  <svg id="distanceGoalGroup" class="goal" x="0" y="0">
+    <animate attributeName="y" begin="enable" from="10" to="0" dur="0.2" easing="linear" final="restore" />
+    <animate attributeName="opacity" begin="enable" from="0" to="0.7" dur="0.2" easing="linear" final="restore" />
+    <image class="goal-image" x="125" y="20" width="10%" height="10%" href="images/icons/location.png" load="sync"/>
+    <text id="distance-label" x="190" y="43" fill="white" font-size="24" font-family="System-Regular" text-anchor="middle" text-length="6" opacity="0.7">999.99</text>
+  </svg>
+  <!--  ELEVATION  -->
+  <svg id="elevationGoalGroup" class="goal" x="0" y="0">
+    <animate attributeName="y" begin="enable" from="10" to="0" dur="0.2" easing="linear" final="restore" />
+    <animate attributeName="opacity" begin="enable" from="0" to="0.7" dur="0.2" easing="linear" final="restore" />
+    <image class="goal-image" x="125" y="20" width="10%" height="10%" href="images/icons/stairs.png" load="sync"/>
+    <text id="elevation-label" x="190" y="43" fill="white" font-size="24" font-family="System-Regular" text-anchor="middle" text-length="3" opacity="0.7">999</text>
+  </svg>
+  <!--  STEPS  -->
+  <svg id="stepsGoalGroup" class="goal" x="0" y="0">
+    <animate attributeName="y" begin="enable" from="10" to="0" dur="0.2" easing="linear" final="restore" />
+    <animate attributeName="opacity" begin="enable" from="0" to="0.7" dur="0.2" easing="linear" final="restore" />
+    <image class="goal-image" x="125" y="20" width="10%" height="10%" href="images/icons/shoe.png" load="sync"/>
+    <text id="steps-label" x="190" y="43" fill="white" font-size="24" font-family="System-Regular" text-anchor="middle" text-length="7" opacity="0.7">10 000</text>
+  </svg>
+  <!--  BATTERY  -->
+  <rect id="rect-battery" x="35" y="28" width="30" height="15" fill="#e645bc"/>
+  <image x="35" y="28" width="30" height="15" href="images/icons/battery.png" load="sync"/>
+  
+  <rect x="35" y="44" width="30" height="2" fill="#e645bc"/>
+  <svg id="rect-charging">
+    <animate attributeName="x" begin="enable" end="disable" from="0" to="30" dur="0.7" easing="linear" final="restore" repeatCount="indefinite" repeatDur="0.9"/>
+    <rect x="35" y="44" width="30" height="2" fill="#000000"/>
+  </svg>
+  <!--  NOT VISIBLE ONLY FOR TAP EVENT  -->
+  <rect id="tap-target" width="100%" height="100%" opacity="0" pointer-events="all" />
+</svg>
+
+<svg>
+  <defs>
+  <linearGradient id="Gradient1" gradientTransform="rotate(90)">
+      <stop offset="0%" stop-color="#ff0000"/>
+      <stop offset="100%" stop-color="#00ff00"/>
+    </linearGradient>
+     <linearGradient id="Gradient2" gradientTransform="rotate(90)">
+      <stop offset="0%" stop-color="#0000ff"/>
+      <stop offset="100%" stop-color="#00ff00"/>
+    </linearGradient>
+    <pattern id="Pattern" x="0" y="0" width="600" height="600" patternUnits="userSpaceOnUse">
+    <g transform="rotate(0, 300, 300)">
+   <rect shape-rendering="crispEdges" x="0" y="0" width="300" height="600" fill="url(#Gradient1)"/>
+   <rect shape-rendering="crispEdges"  x="300" y="0" width="300" height="600" fill="url(#Gradient2)"/>
+   </g>
+  </pattern>
+  </defs>
+
+  <path id='arc5' style="stroke: url(#Pattern);" fill='transparent' stroke-width='60' d='M 364 58 A 250 250 0 1 1 235 58'/>
+
+</svg>
